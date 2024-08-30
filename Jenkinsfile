@@ -2,27 +2,27 @@ pipeline {
     agent any  // Allocate an agent for the entire pipeline
 
     stages {
-        stage('Build') {
+        stage('WakingUp') {
             steps {
-                echo "Building.."
+                echo "WakingUp.."
                 sh '''
-                echo "doing build stuff.."
+                echo "doing WakingUp stuff.."
                 '''
             }
         }
-        stage('Test') {
+        stage('Eating') {
             steps {
-                echo "Testing.."
+                echo "Eating.."
                 sh '''
-                echo "doing test stuff.."
+                echo "doing Eating stuff.."
                 '''
             }
         }
-        stage('Deliver') {
+        stage('Working') {
             steps {
-                echo 'Deliver....'
+                echo 'Working....'
                 sh '''
-                echo "doing delivery stuff.."
+                echo "doing Working stuff.."
                 '''
             }
         }
