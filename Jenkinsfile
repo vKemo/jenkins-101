@@ -1,5 +1,5 @@
 pipeline {
-    agent none  // No agent will be allocated for the entire pipeline
+    agent any  // Allocate an agent for the entire pipeline
 
     stages {
         stage('Build') {
