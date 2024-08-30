@@ -1,9 +1,8 @@
 pipeline {
-    agent { none }  // No agent allocated for the entire pipeline
+    agent none  // No agent will be allocated for the entire pipeline
 
     stages {
         stage('Build') {
-            agent { label 'my-agent-label' }  // Specify an agent for this stage
             steps {
                 echo "Building.."
                 sh '''
@@ -12,7 +11,6 @@ pipeline {
             }
         }
         stage('Test') {
-            agent { label 'my-agent-label' }  // Specify an agent for this stage
             steps {
                 echo "Testing.."
                 sh '''
@@ -21,7 +19,6 @@ pipeline {
             }
         }
         stage('Deliver') {
-            agent { label 'my-agent-label' }  // Specify an agent for this stage
             steps {
                 echo 'Deliver....'
                 sh '''
